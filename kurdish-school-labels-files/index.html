@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ku" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>کچ یان کور؟</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section id="stepGender" class="screen active">
+      <div class="hero">
+        <div class="spark">✦</div>
+        <h1>کچ یان کور؟</h1>
+        <p>جۆری لیبڵی خوێندنگەکەت هەڵبژێرە</p>
+      </div>
+      <div class="gender-grid">
+        <button class="gender-card boy" data-gender="boy">
+          <span class="emoji">👦🏻</span><strong>کور</strong><small>بۆ کوڕان</small>
+        </button>
+        <button class="gender-card girl" data-gender="girl">
+          <span class="emoji">👧🏻</span><strong>کچ</strong><small>بۆ کچان</small>
+        </button>
+      </div>
+    </section>
+
+    <section id="stepUpload" class="screen">
+      <button class="back" id="backBtn">← گەڕانەوە</button>
+      <div class="hero compact">
+        <div class="selected-badge" id="selectedBadge"></div>
+        <h1>وێنەی منداڵەکە دابنێ</h1>
+        <p>وێنەیەکی ڕوون هەڵبژێرە بۆ دروستکردنی ٨ لیبڵی خوێندنگە.</p>
+      </div>
+      <label class="dropzone" for="photoInput" id="dropzone">
+        <input id="photoInput" type="file" accept="image/*" />
+        <div id="uploadEmpty">
+          <div class="upload-icon">↑</div>
+          <strong>وێنەکە لێرە دابنێ</strong>
+          <span>یان کلیک بکە بۆ هەڵبژاردن • JPG / PNG / WEBP</span>
+        </div>
+        <img id="preview" alt="پێشبینینی وێنە" />
+      </label>
+      <div class="actions">
+        <button id="generateBtn" class="primary" disabled>دروستکردنی لیبڵەکان ✨</button>
+      </div>
+      <p class="privacy">وێنەکە لە ناو وێبگەکەدا جێبەجێ دەکرێت و بۆ سێرڤەر نەنێردرێت.</p>
+    </section>
+
+    <section id="stepResult" class="screen">
+      <div class="result-head">
+        <button class="back" id="startOverBtn">← دەستپێکردنەوە</button>
+        <div><h1>لیبڵەکانت ئامادەن 🎉</h1><p>پەڕەی A4 ـەکە بۆ چاپکردن ئامادەیە.</p></div>
+      </div>
+      <div class="sheet-wrap"><canvas id="sheet" width="2480" height="3508"></canvas></div>
+      <div class="actions result-actions">
+        <button id="downloadBtn" class="primary">داگرتنی وێنەی A4 ↓</button>
+        <button id="printBtn" class="secondary">چاپکردن 🖨️</button>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
